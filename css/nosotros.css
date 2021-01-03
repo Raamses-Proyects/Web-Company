@@ -1,0 +1,31 @@
+.NuestroEquipo{ /*out-team*/
+  text-align: center;
+  margin-bottom: 20px;/*para separar de la parte de abajo*/
+}
+
+/*.our-team .container__flex{
+  align-items: flex-start;
+}*/
+
+.tituloEquipo{/*our-team__title*/
+  font-family: 'Pacifico', cursive;
+  color: #8c1063;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.imagenesEquipo{/*our-team__img*/
+  width: 200px;
+  height: 200px;
+  object-fit: cover;/*para que no se distorionen las imagenes*/
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.descripcionIntegrante{/*our-team__txt*/
+  padding: 10px;
+  text-align: justify;
+}

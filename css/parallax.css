@@ -1,0 +1,87 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax{
+  background: #fff fixed no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#section1{
+  background-image: url('../img/laptop3.jpg');
+}
+
+#section2{
+  background-image: url('../img/beautifulCasual4.jpg');
+}
+
+.parrafo{
+  /*padding-right:  50px;*/
+  margin: auto;
+}
+
+.titulo{
+   /*es el margen hacia arriba y abajo del titulo(las letras)*/
+  font-size: 2.0em;/*Cambiando el tamaño de la letra */
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;/*quitando el grosor de letra*/
+  padding-left: 40%;
+}
+
+.subtitulo{
+  font-size: 1.3em;/*Cambiando el tamaño de la letra */
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;/*quitando el grosor de letra*/
+}
+
+.btnCerrar{
+  border-radius: 5%;
+  font-size: 1em;
+  font-family: 'Pacifico', cursive;
+  background: #8c1063;
+  color: white;
+  text-decoration: none;
+  width: 110px;
+  padding: 5px;
+  margin: -81px auto;
+  display: block;
+}
+
+.derecha{
+   float:right;
+   padding-top: 20px;
+}
+
+.btnExamen{
+  border-radius: 5%;
+  font-size: 1.3em;
+  font-family: 'Pacifico', cursive;
+  background: #8c1063;
+  color: white;
+  text-decoration: none;
+  width: 120px;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+
+.oscuro{
+  background: rgba(0,0,0,.85);
+  color: white;
+  padding: 5px;
+  padding-top: 5px; /*padding de arriba*/
+  padding-bottom: 5px; /*padding de abajo*/
+  font-size: .8em;
+  text-align: center;
+}

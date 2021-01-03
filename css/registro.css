@@ -1,0 +1,47 @@
+/*----------------------Estilo a los formularios-------------------------*/
+.formulario{
+  padding: 8px;
+  padding-top: 0;
+  background-color: #8c1063;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  font-size: 1.3em;
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 35px;/*-87*/
+}
+
+.formulario__label, .formulario__input-txt, .formulario__textarea{
+  width: 150px;
+  margin: 0px auto;
+}
+
+.formulario__label, .formulario__input-txt, .formulario__textarea{
+  display: block;
+  width: 70%;
+}
+
+.formulario__input-txt{
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', cursive;
+  font-size: .7em;
+}
+
+.formulario__textarea{
+  min-height: 100px;/*minino que se puede hacer el textarea*/
+  max-height: 200px;/*maximo que se puede hacer el textarea*/
+  min-width: 70%;
+  max-width: 70%;
+  font-family: 'Montserrat', cursive;
+  font-size: .7em;
+}
+
+.formulario__btn{
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: 'Pacifico', cursive;
+  background: white;
+  color: #8c1063;
+}

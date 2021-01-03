@@ -1,0 +1,378 @@
+/*-------------Exportando las fuentes-----------*/
+@font-face {
+    font-family: "Pacifico";
+    src: url(../fuentesLetrasIconos/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fuentesLetrasIconos/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: bold;/*para que no se agrege negrita general a todos los estilos Montserrat, solo a los titulos*/
+  src: url(../fuentesLetrasIconos/Montserrat-bold.ttf);
+}
+
+
+*{/*esto afectara a todo el documento, por eso el (*) */
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; /*quitando el margen de todos los textos*/
+}
+
+/*-----------------------------Estilos base-----------------------------*/
+
+img{
+  display: block;/*display: significa mostrar elementos, ya sea en block(h2, h3 etc. porque habarcan todo el ancho de su contenedor) o en linea, que solamente utilizan el espacio necesario de acuerdo a sus dimenciones*/
+  width: 100%;  /*imagenes con el 100% de la pagina*/
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;/*quitando los margenes*/
+}
+
+h1{
+  text-align: center;
+}
+.container{/*es la clase que va a ayudar a delimitar el contenido de la página. Es donde comienza el primer parrafo con el titulo Bienvenidos  */
+  width: 100%;
+  margin: auto; /*margin establece el margen para los cuatro lados*/
+
+}
+
+.container__flex{
+display: flex;/* propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.*/
+/*-----Tal vez estos tres no se ocupen----- */
+flex-wrap: wrap;/*para que los elemet que no entren se vallan asi bajo*/
+justify-content:space-between; /*alinear en el eje principal que por defecto es horizontal*/
+align-items: center; /*alinear en el eje secundario que por defecto es vertical*/
+}
+
+.column{/*clase para elementos que iba a estar una al lado del otro, todos comparten la clase column*/
+  width: 100%;
+}
+
+/*-----------------------------Estilos header-----------------------------*/
+
+.main-header{
+  width: 100%;
+}
+
+.logo{/*El titulo  principal de la página*/
+  font-size: 2.5em;/*permite establecer el tamaño del texto de forma relativa mediante las palabras clave larger y smaller*/
+  color:  #8c1063;
+  padding: 10px; /*establece el espacio de relleno requerido por todos los lados de un elemento*/
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;/*grosor de la fuent e*/
+}
+
+.main-header__contactInfo__phone{
+  background:  #8c1063;
+  color:white;
+  margin: 0 auto;
+  padding: 10px; /*digamos que son los margenes que tiene hacia arriba y hacia bajo*/
+  text-align: center;
+}
+
+.btnCerrarAdmin
+{
+  border-radius: 5%;
+  background: white;
+  font-size: 1em;
+  font-family: 'Pacifico', cursive;
+  text-decoration: none;
+  width: 90px;
+  padding: 2px;
+  color: #8c1063;
+}
+
+.main-header__contactInfo_address{
+  padding: 10px; /*digamos que son los margenes que tiene hacia arriba y hacia bajo*/
+  margin: 0;
+}
+
+.main-header [class*="icon-"]:before{/*-----------------tal vez quite esto---------------------*/
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+
+/*-----------------------------Estilos del menu y nav -----------------------------*/
+.main-nav{
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  padding: 10px; /*digamos que son los margenes que tiene hacia arriba y hacia bajo*/
+}
+
+.icon-menu{/*Estilo al icono de menu*/
+  display: block;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;/*para que cuando se pase el cursos se vea una mano*/
+  font-size: 1.5em;
+
+}
+
+.social-icon{/*estilo para contenedor de tres iconos, facebook, twitter, email*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icon [class*="icon-"]{/*estilo para contenedor de tres iconos, facebook, twitter, email*/
+  color: black;
+  margin-left:10px;
+  display: flex;
+  justify-content: center;/*posicion de contenido dentro de circulito*/
+  align-items: center;
+  font-size: 1.3em;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+}
+
+.social-icon__link{/*esta clase esta dentro de social-icon*/
+  text-decoration: none;/*quitando el subrayado a los iconos*/
+}
+
+.menu{/*diseño para todo el menu*/
+  position: absolute;
+  top: 60px;/*Para los elementos con una posición absoluta (aquellos que tienen la propiedad position: absolute o position: fixed), determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene.*/
+  left: 0;/*para mover de position las dimenciones*/
+  width: 100%;
+  background: rgba(0,0,0,.85);
+  padding: 0; /*digamos que son los margenes que tiene hacia arriba y hacia bajo*/
+  margin: 0;
+  list-style: none;
+  text-align: center;/*centrando texto*/
+  height: 0;/*desapareciendo la animacion*/
+  overflow: hidden;/*desapareciendo la animacion*/
+  transition: height .3s linear;
+}
+
+.menu--link{/*diseño para los puros links*/
+  display: block;
+  padding: 15px;/*digamos que son los margenes que tiene hacia arriba y hacia bajo*/
+  color: white;
+  text-decoration: none;/*en este caso para quitar el subrayado*/
+}
+
+.menu--link:hover{/*cuando se pase el mouse por arriba se cambien el color*/
+  background: #8c1063;
+}
+
+.menu__link--select{/*este es para cambiar solo el Inicio a otro color*/
+  background:  #8c1063;
+}
+
+.mostrar{/*esta clase va a ayudar a mostrar el menu por medio del height:0 que se puso casi al final de la clase .menu*/
+  height: 245px;/*196*/
+}
+
+/*-----------------------------Estilos del banner (ES LA PRIMERO IMAGEN)-----------------------------*/
+
+.banner{/*es la clase donde esta la primera imagen*/
+  margin-top: -65px;/*-87*/
+  position: relative;
+}
+
+.banner:before{/*tambien es la clase que contiene la imagen principal per con el atributo before*/
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);/*dando el tono de oscuro a la imagen*/
+  z-index: 1000;
+  top:0;
+}
+
+.banner__img{/*agustando el tamaño de la imagen principal de página*/
+  width: 100%;
+  height: 490px;
+  object-fit: cover;/*para que la imagen no se estire*/
+}
+
+.banner__content{/*estilo al texto que esta sobre la imagen principal*/
+  width: 90%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  z-index: 1500;/*para que el texto no se valla destras del fondo que se haya creado. 1500 significa que va estar adelante de este fondo negro*/
+  top:50%;
+  left: 50%;
+  z-index: 1500;
+  transform: translateX(-50%) translateY(-50%);/*centrando el texto con psosition absolute */
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*-----------------------------Estilos Principales (MAIN de página) -----------------------------*/
+
+.group--color .container{/*dando estilo al contenedor principal de Bienvenidos*/
+  background:  #8c1063;
+  color: white;
+  padding: 10px;/*dando el estilo hacia arriba y abajo del contenedor*/
+  text-align: center;
+}
+
+.main__title{/*dando estilo Bienvenidos*/
+  margin: 15px 0; /*es el margen hacia arriba y abajo del titulo(las letras)*/
+  font-size: 2.0em;/*Cambiando el tamaño de la letra */
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;/*quitando el grosor de letra*/
+}
+
+.ImgMainEquipoTrabajo{/*Agustando tamaño para la segunda Imagen principal de la página*/
+  width: 100%;
+  height: 350px;
+  background: rgba(0,0,0,0.9);
+  object-fit: cover;/*para que la imagen no se estire*/
+}
+
+.column_title{/*estilo a tres titulos de pie de página y uno del main de pagina (Expertos en soluciones)*/
+  font-size: 2.0em;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.main__about__description .column:nth-child(2){/*estilo a la segundo column que esta dentro de la clase main__about__description que es la que tiene el contenido de texto*/
+  padding: 10px;
+}
+.main__about__description{
+  color: white;
+  background: #8c1063;
+}
+
+.column_txt{
+  text-align: center;
+}
+
+.btn {/*estilo a boton de contacto*/
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 120px;
+  background: #8c1063;
+  color: white;
+  padding: 10px;
+  margin: 10px auto; /*dando un margen de 10px y poniendo en medio(con atributo auto)*/
+}
+
+/*     Dando estilo desde la paprte de abajo del boton de CONTACTO     */
+
+.group__title{/*estilo a titulo de TEMAS DESTACADOS*/
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.8em;
+  margin: 30px;
+}
+
+.group__titleA{/*estilo a titulo de TEMAS DESTACADOS*/
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.4em;
+  margin: 30px;
+}
+
+
+.today-special .column{/*estilos a imagene de los temas*/
+  margin-bottom: 30px;/*dando espacio entre cada imagen de la parte de abajo*/
+  text-align: center;
+}
+
+.today-special__img{/*dando estilo a las clases que tienen las imagenes de los temas especiales (todos son especiales)*/
+  margin: auto;
+  max-width: 350px;/*tamaño de las imagenes*/
+  border:5px solid #8c1063;
+  /*cursor: pointer;*/
+}
+
+.tema{/*estilo a los precios (today-special__title)*/
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/*--------------------------------Estilos Pie de pagina--------------------------------*/
+
+.main_footer{/*estilos en general para todo el pie de página*/
+  background: rgba(0,0,0,.85);
+  color: white;
+  padding: 10px;
+  padding-top: 20px; /*padding de arriba*/
+  padding-bottom: 20px; /*padding de abajo*/
+  font-size: .8em;
+  text-align: center;
+}
+
+.main_footer [class*="icon-"]{/*estilos para los iconos de pie de página*/
+  color: white;
+  text-decoration: none;
+}
+
+.main_footer [class*="icon-"]:before{/*estilos para los iconos de pie de página*/
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+.copy{/*estilo para el copy*/
+  margin: auto;
+  margin-top: 15px;
+}
+
+.column--33{
+  width: 33%;
+}
+
+.column--50-25{
+  width: 49%;
+}
+
+/*--------------------------------Estilos responsive(TAL VEZ QUITE ESTOS ESTILOS 10/05/2019)--------------------------------*/
+/*@media screen and (min-width:2080px){/*2080
+  .logo{
+    color: white;
+  }
+
+  .main-header__contactInfo{
+    text-align: right;
+  }
+
+  .main-header__contactInfo__phone{
+    background:none
+
+  }
+
+  .main-header__contactInfo_address{
+    background:white;
+  }
+
+  .main-nav{
+    background: rgba(0,0,0,0.85);
+  }
+
+  .banner{
+    margin-top: -1450px; /*-200
+    z-index: -1000;/*-2000
+  }
+
+  .banner__content{
+    font-size: 2em;
+  }
+
+}*/
