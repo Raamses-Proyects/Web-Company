@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Registro </title>
+
+    <meta name = "viewport"
+    content="width=device-width, user-scalable=yes, initial-scale=1.0,
+    maximum-scale=3.0, minimum-scale=1.0"> <!--para diseño responsibo solo en moviles-->
+
+    <link rel = "stylesheet" href="css/estilos.css">
+    <link rel = "stylesheet" href="css/registro.css">
+    <link href="css/fonts.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--     Cabecera de página      -->
+    <header class = "main-header">
+
+      <div class = "container container__flex"> <!--este div con la clase delimita el contenido de la web.
+        container: es la clase que va a ayudar a delimitar el contenido de la página.
+        container__flex: para poder utilizar flexbox. -->
+
+        <div class = "logo-container column column--50">
+          <h1 class = "logo">Registro </h1>
+        </div>
+        <div class = "main-header__contactInfo column column--50">
+
+          <p class = "main-header__contactInfo__phone">
+            ¿Tienes dudas? <br>Llamanos al:
+            <span class = "icon-phone">432-213-355 </span> <!--Representa texto sin un significado específico.  Este debe ser usado cuando ningún otro elemento semántico le confiere un significado adecuado, en cuyo caso, provendrá de atributos globales como class, lang, o dir. -->
+          </p>
+
+        </div>
+      </div>
+
+    </header>
+
+    <nav  class = "main-nav">
+      <div class = "container container__flex">
+        <span class = "icon-menu" id = "btnMenu"> </span> <!--este el logo de menu y el boton para el menu(su id para ser el btn)-->
+        <ul class = "menu" id = "IdMenu"><!--<ul>:son las barras de navegación. Y aqui esta el id para el menu-->
+          <li class = "menu--item"><a href = "index.php" class = "menu--link ">Inicio </a> </li>
+          <li class = "menu--item"><a href = "nosotros.html" class = "menu--link">Nosotros </a> </li>
+          <li class = "menu--item"><a href = "contacto.html" class = "menu--link menu__link--select">Registro </a> </li>
+          <li class = "menu--item"><a href = "login.html" class = "menu--link">Login </a> </li>
+          <li class = "menu--item"><a href = "php/Administrador.php" class = "menu--link">Administrador </a> </li>
+        </ul>
+
+      </div>
+    </nav>
+
+  <!--      Cuerpo de pagina (main)      -->
+  <section class = "banner">
+    <img src = "img/suscribete.jpg" class = "banner__img"> <!--   1 imagen   -->
+    <div class = "banner__content">Suscribete y déjanos un mensaje  </div>
+  </section>
+
+  <main class = "main">
+
+    <section class = "group contact">
+      <h2 class = "group__title">Ingresar datos </h2>
+      <div class = "container container__flex">
+
+         <!--_________________________Aqui se esta creando el formulario_______________________----------------->
+        <form action = "php/registro.php" method = "post" class = "formulario column column--50">
+            <label class = "formulario__label">Nombre de usuario:</label>
+            <input type="text" class = "formulario__input-txt" name = "txtNombre" placeholder = "Nombre" title = "Ingresar nombre es obligatorio" maxlength=20>
+
+            <label class = "formulario__label">Correo:</label>
+            <input type="email" class = "formulario__input-txt" name = "txtCorreo" placeholder = "Correo" title="Ingresar email es obligatorio" maxlength=40>
+
+            <label class = "formulario__label">Clave:</label>
+            <input type="password" class = "formulario__input-txt" name = "txtClave" placeholder = "&#128477;" title="Ingresar contraseña es obligatorio" maxlength=30>
+
+            <label class = "formulario__label">Telefono:</label>
+            <input type="text" class = "formulario__input-txt" name = "txtTelefono" placeholder = "Telefono" title="Este campo es opcional" maxlength=10>
+
+            <label class = "formulario__label">Mensaje:</label>
+            <textarea name="txtaMensaje" class = "formulario__textarea" rows="10" cols="30" placeholder = "Nos interesa saber su opinión" title="Este campo es opcional" maxlength=255></textarea>
+
+            <input type="submit" class = "btn formulario__btn" value = "Enviar">
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--      Pie de página      -->
+<footer class = "main_footer">
+
+  <div class = "container container__flex">
+
+    <div class = "column column--33">
+      <h2 class = "column_title">¿Porque visitarnos? </h2>
+      <p class = "column_txt">
+        Resolvemos de manera ágil las necesidades de nuestros clientes, gracias al excelente
+        desempeño de nuestros profesionales y la calidad garantizada en los servicios que brindamos.
+      </p>
+    </div>
+
+    <div class = "column column--33">
+      <h2 class = "column_title">Contactenos </h2>
+      <p class = "column_txt">Magdalena de kino - 84160 </p>
+      <p class = "column_txt">Telefono: 432-213-355 </p>
+      <p class = "column_txt">CreacionProyectos@gmail.com </p>
+    </div>
+
+    <div class = "column column--33">
+      <h2 class = "column_title">Siguenos en nuestras redes </h2>
+        <p class = "column_txt"><a href = "https://www.facebook.com/"  target="_blank" class = "icon-facebook">Facebook</a> </p>
+        <p class = "column_txt"><a href = "https://twitter.com/?lang=es" target="_blank" class = "icon-twitter">Siguenos en Twitter</a> </p>
+        <p class = "column_txt"><a href = "https://www.youtube.com/" target="_blank" class = "icon-youtube">Visita el canal de Youtube</a> </p>
+    </div>
+
+    <p class = "copy">© 2019 Equipos de trabajo | Todos los derechos reservados </p>
+
+  </div>
+
+</footer>
+<script src="js/menu.js"></script>
+  </body>
+
+</html>

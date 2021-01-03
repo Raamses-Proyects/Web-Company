@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+  <head>
+
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel = "stylesheet" href="css/estilos.css">
+    <link rel = "stylesheet" href="css/registro.css">
+
+    <link href="css/fonts.css" rel="stylesheet">
+
+  </head>
+  <body style = "background-color: #333138">
+<!--_________________________________________Menu______________________________________________-->
+    <nav  class = "main-nav">
+      <div class = "container container__flex">
+        <span class = "icon-menu" id = "btnMenu"> </span> <!--este el logo de menu y el boton para el menu(su id para ser el btn)-->
+        <ul class = "menu" id = "IdMenu"><!--<ul>:son las barras de navegación. Y aqui esta el id para el menu-->
+          <li class = "menu--item"><a href = "index.php" class = "menu--link">Inicio </a> </li>
+          <li class = "menu--item"><a href = "nosotros.html" class = "menu--link">Nosotros </a> </li>
+          <li class = "menu--item"><a href = "registro.html" class = "menu--link">Registro </a> </li>
+          <li class = "menu--item"><a href = "login.html" class = "menu--link ">Login </a> </li>
+          <li class = "menu--item"><a href = "php/Administrador.php" class = "menu--link">Administrador </a> </li>
+        </ul>
+
+      </div>
+    </nav>
+
+<!--_____________________________________Formulario______________________________________________________ -->
+    <section class = "group contact">
+      <h2 class = "group__title" style = "color:white">Entrar </h2>
+      <div class = "container container__flex">
+
+         <!--Aqui se esta creando el formulario de login ----------------->
+        <form action = "php/validarLogin.php" method = "post" class = "formulario column column--50">
+            <label class = "formulario__label">Nombre de usuario:</label>
+            <input type="text" class = "formulario__input-txt" name = "txtNombre" placeholder = "Nombre" title = "Ingrese su nombre de usuario">
+
+            <label class = "formulario__label">Clave:</label>
+            <input type="password" class = "formulario__input-txt" name = "txtClave" placeholder = "&#128477;" title="Ingrese su contraseña">
+
+            <input type="submit" class = "btn formulario__btn" value = "Enviar">
+        </form>
+      </div>
+    </section>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
