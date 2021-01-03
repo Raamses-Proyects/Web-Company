@@ -1,5 +1,5 @@
 # Web-Company
-Presentación de página web para empresa de desarrollo de software, de inicio la página le da la bienvenida al usuario, en la esquina superior izquierda se encuentra el menú el cual tiene las opciones para navegar en las diferentes páginas que son: Inicio, Nosotros, Registro, Login, Administrador (en esta sección, así como otras se encuentran bloqueadas ya sea solo para personas registradas, o en este caso bloqueado solo para el Administrador).
+Presentación de página web para empresa de desarrollo de software, de inicio la página le da la bienvenida al usuario, en la esquina superior izquierda se encuentra el menú el cual tiene las opciones para navegar en las diferentes páginas que son: Inicio, Nosotros, Registro, Login, Administrador (en esta sección, así como en otras, se encuentra bloqueado el acceso ya sea solo para personas registradas, o en este caso bloqueado solo para el Administrador).
 El Administrador tiene los privilegios de acceso a las paginas para eliminar, buscar, mostrar y actualizar los datos de los usuarios.
 Los usuarios registrados tendrán acceso a una página para estudiar dos metodologías de desarrollo de software y tendrán la opción de hacer un examen el cual los evaluara y les dirá si necesitan volver a estudiar, qué tema necesitan estudiar, o no.
 
